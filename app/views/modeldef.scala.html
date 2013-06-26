@@ -1,10 +1,18 @@
-@()
+@(modelDefForm: Form[_])
 
 @main("Kiji Viz Studio: ModelDefinition Editor") {
 
 <div class="row">
-  <div class="span3">&nbsp;</div>
-  <div class="span6"><h2>This is the ModelDefinition Editor.</h2></div>
+  <div>&nbsp;</div>
+  <div class="text-center"><h2>This is the ModelDefinition Editor.</h2></div>
+
+  <div>
+    @helper.form(action = routes.ModelDef.submit) {
+      @helper.inputText(modelDefForm("name"))
+      @helper.inputText(modelDefForm("version"))
+      <input type="submit" class="btn primary" value="Submit">
+    }
+  </div>
 </div>
 
 }

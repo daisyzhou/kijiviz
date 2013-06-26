@@ -15,6 +15,7 @@ object ApplicationBuild extends Build {
     // Add your project dependencies here,
     //jdbc,
     //anorm,
+    //"org.kiji.express" % "kiji-express" % "0.5.0",
     "org.kiji.schema" % "kiji-schema" % "1.1.0",
     "org.kiji.platforms" % "kiji-cdh4-platform" % "1.1.0"
 
@@ -28,7 +29,7 @@ object ApplicationBuild extends Build {
     // Add your own project settings here
 
     // Add Kiji repository to resolvers
-    resolvers += "Kiji Repository" at "https://repo.wibidata.com/artifactory/kiji"
-  )
+    resolvers ++= Seq(
+        "Kiji Repository" at "https://repo.wibidata.com/artifactory/kiji"))
 
 }

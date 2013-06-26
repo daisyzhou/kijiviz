@@ -8,7 +8,8 @@ GET     /tables                     controllers.TableViewer.index
 GET     /layouts                    controllers.LayoutViewer.index
 GET     /layouteditor               controllers.LayoutEditor.index
 GET     /dataviz                    controllers.DataViz.index
-GET     /modeldef                   controllers.ModelDef.index
+GET     /modeldef                   controllers.ModelDef.form
+POST    /modeldef                   controllers.ModelDef.submit
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
