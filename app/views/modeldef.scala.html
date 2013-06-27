@@ -10,6 +10,8 @@
     @helper.form(action = routes.ModelDef.submit) {
       @helper.inputText(modelDefForm("name"))
       @helper.inputText(modelDefForm("version"))
+      @helper.inputText(modelDefForm("extractor class name"))
+      @helper.inputText(modelDefForm("scorer class name"))
       <input type="submit" class="btn primary" value="Submit">
     }
   </div>
